@@ -1,0 +1,93 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+       
+    
+        p {
+            color: #333;
+            line-height: 1.8;
+            font-size: 1.05em;
+            margin: 20px 0;
+        }
+
+        .cntr {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 30px 0;
+            background-image: url('robo.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cntr > div {
+            min-width: 200px;
+            max-width: 300px;
+        }
+
+        div {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(200, 200, 200, 0.3);
+        }
+
+        .cntr:hover{
+            color: #667eea;
+            background-color: #333;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #667eea, transparent);
+            margin: 20px 0;
+        }
+
+        .roboimg {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            min-width: 200px;
+            max-width: 300px;         
+        }
+        .glry {
+            display: flex;
+            gap: 25px;
+            /* flex-wrap: wrap; */
+            justify-content: center;
+            margin-top: 5px;
+            width: 100%;
+            position:absolute;
+            background-color: #818d9a;
+            padding: 20px;
+
+        }
+        .roboimg:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
