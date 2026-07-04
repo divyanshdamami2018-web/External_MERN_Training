@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Promise</h1>
+    <button onclick="loaddata()">click</button>
+    <div id="data">
+
+    </div>
+    <script>
+        function loaddata(){
+            let output = document.getElementById('data');
+            output.innerHTML = '';
+          
+
+            const urls = [
+                "https://jsonplaceholder.typicode.com/users/1",
+                "https://jsonplaceholder.typicode.com/posts/1",
+                "https://jsonplaceholder.typicode.com/comments/1"
+            ];
+
+            Promise.all(urls.map(url => fetch(url).then(response => {
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok for ${url}`);
+                }
+                return response.json();
+            })))
+            .then(([user, post, comment]) => {
+                output.innerHTML = `<p>Name: ${user.name}</p>` +
+                                   `<p>Title: ${post.title}</p>` +
+                                   `<p>Body: ${comment.body}</p>`;
+            })
+            .catch(error => {
+                output.innerHTML = `<p>Error: ${error.message}</p>`;
+            });
+        }
+    </script>
+</body>
+</html>
